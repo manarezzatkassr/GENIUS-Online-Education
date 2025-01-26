@@ -98,6 +98,7 @@
     list-style: none;
     padding: 0;
     line-height: 1.8;
+    border-top: 1px solid var(--gray-color-list-text);
   }
   .rate span{
     color: var(--green-color);
