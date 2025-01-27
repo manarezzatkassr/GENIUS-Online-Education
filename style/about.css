@@ -382,7 +382,7 @@
     padding-inline: 2em;
 }
 /* ----instructor----- */
-.instructors-container{
+.instructors-container-sec{
     width: 100%;
     display: flex;
     gap: 1.25em;

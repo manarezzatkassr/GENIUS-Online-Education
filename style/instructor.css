@@ -9,9 +9,9 @@
     margin-top: 2.5em;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5em;
+    gap: 1em;
 }
-.instructor-card {
+.instructor-card-sec {
     width: calc((100% - 3em) / 4);
 }
 .instructors-image-sec {
