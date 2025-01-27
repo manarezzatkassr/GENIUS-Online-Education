@@ -355,61 +355,59 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
-    margin-block: 2em;
+    padding-block: 2em;
     border-radius: 0.8em 0.8em 0.3em 0.3em;
 }
 .benifit-content-sec{
     width: 85%;
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-.card-row{
-    height: 13em;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     gap: 1em;
-    margin-block-end: 1.5em;
     color: var(--white-color);
 }
 .learn-card1-sec{
-    max-width: calc(50% - 1em);
+    width: calc((100% - 1em)/2);
+    height: 13.5em;
     border-radius: 0.3em;
     display: flex;
     justify-content: center;
     flex-direction: column;
     padding-inline: 2em;
 }
+.learn-card1-sec h5{
+    padding-block: 0.6em;
+}
 /* ----instructor----- */
-.instructors-container-sec{
+
+.instructors-container-sec {
     width: 100%;
     display: flex;
-    gap: 1.25em;
+    flex-wrap: wrap;
+    gap: 1em;
 }
-.instructor-card{
-    width: 30%;
-    height: 23.9em;
+.instructor-card {
+    width: calc((100% - 2em) / 3); 
+    display: flex;
     flex-direction: column;
-    background-color: var(--secondary-color);
-    border-radius: 0.6em;
+    /* background-color: var(--secondary-color); */
+    border-radius:0 0.8em .8em 0 ;
 }
 .instructors-image{
     position: relative;
     width: 100%;
     height: 14em;
+    border-radius: 0.8em .8em 0 0;
 }
 .instructors-image img{
     position: absolute;
-    top: -15%;
     width: 100%;
-    height: 115%;
+    bottom: 0;
     object-fit: cover;
 }
 .instructors-content{
     width: 100%;
-    height: 7em;
     padding: 0.4em;
+    border-radius:0 0 0.8em .8em ;
 }
 .instructors-content h3{
     font-size: 1.5em;
@@ -443,17 +441,13 @@
         justify-content: center;
         align-items: center;
     }
-
     .buy {
         text-align: center;
     }
     .about-left-sec{
         width: 100%;
     }
-    .card-row{
-        flex-wrap: nowrap;
-    }
-    .instructors-container{
+    .instructors-container-sec{
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -463,5 +457,16 @@
     }
     .instructors-image img{
         object-fit: contain;
+        height: 110%;
+    }
+}
+@media (max-width: 780px){
+    .learn-card1-sec{
+        width: 100%;
+        flex-wrap: wrap;
+    }
+    .instructors-image img{
+        object-fit: contain;
+        height: 110%;
     }
 }

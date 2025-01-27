@@ -254,16 +254,15 @@
     flex-wrap: wrap;
     gap: 1em;
 }
-.instructor-card {
+.instructor-card-sec {
     width: calc((100% - 3em) / 4);
 }
-.instructors-image {
-    background: #12376b40;
+.instructors-image-sec {
     height: 13em;
     position: relative;
     border-radius: 0.8em 0.8em 0 0;
 }
-.instructors-image img {
+.instructors-image-sec img {
     position: absolute;
     width: 100%;
     height: 14em;
@@ -271,8 +270,8 @@
     bottom: 0;
 }
 .instructors-content {
-    padding: 2em;
     background: var(--secondary-color);
+    border-radius:0 0 0.8em .8em ;
 }
 .instructors-content h3 {
     margin-bottom: 0.5em;
@@ -348,7 +347,7 @@
 }
 @media (max-width: 1251px) {
     .course-card,
-    .instructor-card {
+    .instructor-card-sec,.instructor-card {
         width: calc((100% - 2em) / 3);
     }
 }
@@ -381,7 +380,7 @@
         display: none;
     }
     .testmoinal-card,
-    .instructor-card {
+    .instructor-card-sec,.instructor-card {
         width: 100%;
     }
     .ads-container {
