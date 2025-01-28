@@ -172,6 +172,13 @@
     overflow: hidden;
     width: calc((100% - 3em) / 4);
     background: var(--secondary-color);
+    transition: transform 0.3s ease, flex 0.3s ease;
+    transition: box-shadow 0.3s ease;
+}
+.course-card:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(82, 134, 190, 0.2); 
+    transform: translate(-5px,-5px);
 }
 .course-content {
     padding: 1.5em;
@@ -256,6 +263,13 @@
 }
 .instructor-card-sec {
     width: calc((100% - 3em) / 4);
+    transition: transform 0.3s ease, flex 0.3s ease;
+    transition: box-shadow 0.3s ease;
+}
+.instructor-card-sec:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(82, 134, 190, 0.2); 
+    transform: translate(-5px,-5px);
 }
 .instructors-image-sec {
     height: 13em;
@@ -272,6 +286,7 @@
 .instructors-content {
     background: var(--secondary-color);
     border-radius:0 0 0.8em .8em ;
+    padding-inline-start: 1em;
 }
 .instructors-content h3 {
     margin-bottom: 0.5em;
@@ -344,6 +359,10 @@
     border: 0;
     font-weight: 700;
     cursor: pointer;
+}
+.ads-content button:hover{
+    background: var(--yellow-color);
+    color: var(--white-color);
 }
 @media (max-width: 1251px) {
     .course-card,

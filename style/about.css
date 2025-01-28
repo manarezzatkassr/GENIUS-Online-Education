@@ -109,7 +109,6 @@
     text-align: center;
     margin: 20px 0;
   }
-
   .button {
     display: flex;
     justify-content: center;
@@ -123,18 +122,15 @@
     cursor: pointer;
     transition: background-color 0.3s;
   }
-
   .button:hover {
     background-color: var( --color-font-card);
     color: var(--white-color);
   }
-
   .button.secondary {
     color: var(--btn-color-sec);
     background-color: var( --gray-bg-card);
     border: 1px solid var(--gray-color-list-text);
   }
-
   .button.secondary:hover {
     background-color: var(--gray-color-list-text);
     color: var(--white-color);
@@ -355,7 +351,8 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
-    padding-block: 2em;
+    padding-block-end: 2em;
+    margin-block-start: 2em;
     border-radius: 0.8em 0.8em 0.3em 0.3em;
 }
 .benifit-content-sec{
@@ -373,24 +370,64 @@
     justify-content: center;
     flex-direction: column;
     padding-inline: 2em;
+    transition: transform 0.3s ease, flex 0.3s ease;
+    transition: box-shadow 0.3s ease;
 }
 .learn-card1-sec h5{
     padding-block: 0.6em;
 }
+/* ------course------ */
+.course-card-sec{
+    border-radius: 0.8em;
+    overflow: hidden;
+    width: calc((100% - 3em) / 4);
+    background: var(--secondary-color);
+    transition: transform 0.3s ease, flex 0.3s ease;
+    transition: box-shadow 0.3s ease;
+}
+.course-card-sec:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(82, 134, 190, 0.2); 
+    transform: translate(-5px,-5px);
+}
 /* ----instructor----- */
-
+.instructors-container-card-sec{
+    position: relative;
+}
 .instructors-container-sec {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
+    position: relative;
 }
+.instructor_section_card_images::after{
+    content: "";
+    width: 35%;
+    height: 105%;
+    background: linear-gradient(90deg,  #FFF 40.8%, rgba(255, 255, 255, 0) 100%);
+    position: absolute;
+    left: 0;
+    top: -5%;
+}
+
 .instructor-card {
+    position: relative;
     width: calc((100% - 2em) / 3); 
     display: flex;
     flex-direction: column;
-    /* background-color: var(--secondary-color); */
-    border-radius:0 0.8em .8em 0 ;
+    flex-shrink: 0;
+    border-radius:0 0 0.8em .8em;
+    transition: transform 0.3s ease, flex 0.3s ease;
+    transition: box-shadow 0.3s ease;
+}
+.instructor-card:hover{
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(82, 134, 190, 0.2); 
+    transform: translate(-5px,-5px);
+}
+.instructor-card:hover .instructors-content{
+    background-color: var(--gray-bg-list);
 }
 .instructors-image{
     position: relative;
@@ -401,8 +438,9 @@
 .instructors-image img{
     position: absolute;
     width: 100%;
+    height: 110%;
     bottom: 0;
-    object-fit: cover;
+    object-fit: contain;
 }
 .instructors-content{
     width: 100%;
@@ -410,7 +448,7 @@
     border-radius:0 0 0.8em .8em ;
 }
 .instructors-content h3{
-    font-size: 1.5em;
+    font-size: 1em;
 }
 .instructors-content p{
     font-size: 1em;
@@ -447,6 +485,12 @@
     .about-left-sec{
         width: 100%;
     }
+    .course-card-sec{
+        width: calc((100% - 1em) / 2);
+    }
+    .instructor_section_card_images::after{
+        visibility: hidden;
+    }
     .instructors-container-sec{
         flex-direction: column;
         align-items: center;
@@ -464,6 +508,9 @@
     .learn-card1-sec{
         width: 100%;
         flex-wrap: wrap;
+    }
+    .course-card-sec{
+        width: 100%;
     }
     .instructors-image img{
         object-fit: contain;
